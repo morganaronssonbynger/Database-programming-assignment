@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #9BDEFB;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <AnchorPane layoutX="122.0" prefHeight="400.0" prefWidth="462.0">
+         <children>
+            <Pane fx:id="pnl_Result" prefHeight="400.0" prefWidth="478.0" style="-fx-background-color: #9BDEFB;">
+               <children>
+                  <TabPane prefHeight="400.0" prefWidth="478.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Find">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ComboBox fx:id="cbox_getResultForAStudent_courseID" layoutX="100.0" layoutY="107.0" prefWidth="150.0" />
+                                    <ComboBox fx:id="cbox_getResultForAStudent_studentID" layoutX="100.0" layoutY="145.0" prefWidth="150.0" />
+                                    <TextArea fx:id="txtArea_resultForStudent" layoutX="265.0" layoutY="107.0" prefHeight="200.0" prefWidth="200.0" />
+                                    <Label layoutX="34.0" layoutY="111.0" prefHeight="17.0" prefWidth="61.0" text="Course ID:" />
+                                    <Label layoutX="31.0" layoutY="149.0" text="Student ID:" />
+                                    <Button layoutX="152.0" layoutY="186.0" mnemonicParsing="false" onAction="#btnGetResultForAStudent" text="Find" />
+                                    <Label layoutX="191.0" layoutY="26.0" prefHeight="17.0" prefWidth="94.0" text="Find result">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="cbox_getResultForACourse_courseID" layoutX="97.0" layoutY="251.0" prefWidth="150.0" />
+                                    <Button layoutX="146.0" layoutY="288.0" mnemonicParsing="false" onAction="#btnGetResultsForACourse" text="Find" />
+                                    <Label layoutX="31.0" layoutY="255.0" text="Course ID:" />
+                                    <Label layoutX="31.0" layoutY="80.0" text="Result for a student on a course:" />
+                                    <Label layoutX="31.0" layoutY="224.0" text="Results for a course:" />
+                                    <Label layoutX="87.0" layoutY="255.0" text="*" textFill="RED" />
+                                    <Label layoutX="91.0" layoutY="149.0" prefHeight="17.0" prefWidth="9.0" text="*" textFill="RED" />
+                                    <Label layoutX="91.0" layoutY="111.0" prefHeight="17.0" prefWidth="8.0" text="*" textFill="RED" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Add">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ComboBox fx:id="cbox_addResultForStudent_courseID" layoutX="100.0" layoutY="107.0" prefWidth="150.0" />
+                                    <ComboBox fx:id="cbox_addResultForStudent_studentID" layoutX="100.0" layoutY="145.0" prefWidth="150.0" />
+                                    <ComboBox fx:id="cbox_addResultForStudent_letterGrade" layoutX="100.0" layoutY="182.0" prefWidth="150.0" />
+                                    <Button layoutX="131.0" layoutY="232.0" mnemonicParsing="false" onAction="#btnAddResultForStudent" text="Add" />
+                                    <TextArea fx:id="txtArea_addResultForStudent" layoutX="265.0" layoutY="107.0" prefHeight="200.0" prefWidth="200.0" />
+                                    <Label layoutX="36.0" layoutY="111.0" prefHeight="17.0" prefWidth="62.0" text="Course ID:" />
+                                    <Label layoutX="31.0" layoutY="149.0" text="Student ID:" />
+                                    <Label layoutX="55.0" layoutY="186.0" prefHeight="17.0" prefWidth="39.0" text="Grade:" />
+                                    <Label layoutX="52.0" layoutY="40.0" prefHeight="26.0" prefWidth="276.0" text="Add result for a student on a course">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="91.0" layoutY="186.0" text="*" textFill="RED" />
+                                    <Label layoutX="91.0" layoutY="149.0" prefHeight="17.0" prefWidth="9.0" text="*" textFill="RED" />
+                                    <Label layoutX="91.0" layoutY="111.0" prefHeight="17.0" prefWidth="18.0" text="*" textFill="RED" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_Course" prefHeight="400.0" prefWidth="478.0" style="-fx-background-color: #9BDEFB;">
+               <children>
+                  <TabPane prefHeight="400.0" prefWidth="478.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Find">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea fx:id="txtArea_findCourse" layoutX="265.0" layoutY="107.0" prefHeight="200.0" prefWidth="200.0" />
+                                    <Button layoutX="140.0" layoutY="198.0" mnemonicParsing="false" onAction="#btnGetCourse" text="Find" />
+                                    <Label layoutX="24.0" layoutY="146.0" text="Course ID:" />
+                                    <Label layoutX="191.0" layoutY="26.0" prefHeight="26.0" prefWidth="104.0" text="Find a course">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="cbox_findCourse" layoutX="85.0" layoutY="142.0" prefWidth="150.0" />
+                                    <Button layoutX="38.0" layoutY="260.0" mnemonicParsing="false" onAction="#btnGetCourseWithHighestThroughput" text="Get course with highest throughput" />
+                                    <Label layoutX="79.0" layoutY="146.0" prefHeight="17.0" prefWidth="15.0" text="*" textFill="RED" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Add">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="19.0" layoutY="149.0" text="Course Name:" />
+                                    <Label layoutX="53.0" layoutY="190.0" prefHeight="17.0" prefWidth="44.0" text="Credits:" />
+                                    <TextField fx:id="txt_addCourseName" layoutX="100.0" layoutY="145.0" promptText="Databases" />
+                                    <TextField fx:id="txt_addCredits" layoutX="100.0" layoutY="182.0" promptText="1-30" />
+                                    <Button layoutX="148.0" layoutY="216.0" mnemonicParsing="false" onAction="#btnAddCourse" text="Add" />
+                                    <TextArea fx:id="txtArea_addCourse" layoutX="265.0" layoutY="107.0" prefHeight="200.0" prefWidth="200.0" />
+                                    <Label layoutX="191.0" layoutY="26.0" prefHeight="26.0" prefWidth="104.0" text="Add a course">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="39.0" layoutY="116.0" text="Course ID:" />
+                                    <TextField fx:id="txt_addCourseID" layoutX="100.0" layoutY="112.0" promptText="0000" />
+                                    <Label layoutX="94.0" layoutY="149.0" prefHeight="17.0" prefWidth="8.0" text="*" textFill="RED" />
+                                    <Label layoutX="95.0" layoutY="190.0" text="*" textFill="RED" />
+                                    <Label layoutX="94.0" layoutY="116.0" prefHeight="17.0" prefWidth="9.0" text="*" textFill="RED" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Remove">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="191.0" layoutY="26.0" prefHeight="26.0" prefWidth="130.0" text="Remove a course">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="cbox_removeCourse_courseID" layoutX="89.0" layoutY="138.0" prefWidth="150.0" />
+                                    <Button layoutX="134.0" layoutY="186.0" mnemonicParsing="false" onAction="#btnRemoveCourse" text="Remove" />
+                                    <TextArea fx:id="txtArea_removeCourse" layoutX="257.0" layoutY="111.0" prefHeight="200.0" prefWidth="200.0" />
+                                    <Label layoutX="25.0" layoutY="142.0" text="Course ID:" />
+                                    <Label layoutX="80.0" layoutY="142.0" prefHeight="17.0" prefWidth="20.0" text="*" textFill="RED" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                   	  <Tab text="Register">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button layoutX="98.0" layoutY="195.0" mnemonicParsing="false" onAction="#btnAddStudentToCourse" text="Register" />
+                                    <Label layoutX="31.0" layoutY="111.0" text="Student ID: " />
+                                    <Label layoutX="35.0" layoutY="149.0" prefHeight="17.0" prefWidth="58.0" text="Course ID:" />
+                                    <TextArea fx:id="txtArea_addStudentToCourse" layoutX="265.0" layoutY="107.0" prefHeight="200.0" prefWidth="200.0" />
+                                    <Label layoutX="98.0" layoutY="40.0" prefHeight="26.0" prefWidth="230.0" text="Register a student on a course">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="cbox_registerStudentOnCourse_studentID" layoutX="98.0" layoutY="107.0" prefWidth="150.0" />
+                                    <ComboBox fx:id="cbox_registerStudentOnCourse_courseID" layoutX="98.0" layoutY="145.0" prefWidth="150.0" />
+                                    <Button layoutX="180.0" layoutY="195.0" mnemonicParsing="false" onAction="#btnRemoveStudentFromACourse" text="Remove" />
+                                    <Label layoutX="92.0" layoutY="111.0" prefHeight="17.0" prefWidth="16.0" text="*" textFill="RED" />
+                                    <Label layoutX="91.0" layoutY="149.0" prefHeight="17.0" prefWidth="19.0" text="*" textFill="RED" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></Pane>
+            <Pane fx:id="pnl_Student" prefHeight="400.0" prefWidth="478.0" style="-fx-background-color: #9BDEFB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TabPane prefHeight="400.0" prefWidth="478.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Find">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="421.0">
+                                 <children>
+                                    <TextArea fx:id="txtArea_findStudent" layoutX="265.0" layoutY="107.0" prefHeight="200.0" prefWidth="200.0" />
+                                    <Button layoutX="132.0" layoutY="184.0" mnemonicParsing="false" onAction="#btnGetStudent" text="Find" />
+                                    <Label layoutX="31.0" layoutY="111.0" text="StudentID:" />
+                                    <ComboBox fx:id="cbFindStudent" layoutX="100.0" layoutY="107.0" prefWidth="150.0" />
+                                    <Label layoutX="191.0" layoutY="26.0" prefHeight="26.0" prefWidth="112.0" text="Find a student">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="87.0" layoutY="111.0" text="*" textFill="RED" />
+                                 </children>
+                             </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Add">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button layoutX="145.0" layoutY="282.0" mnemonicParsing="false" onAction="#btnAddStudent" text="Add" />
+                                    <TextField fx:id="txt_addStudentID" layoutX="100.0" layoutY="107.0" promptText="0000" />
+                                    <TextField fx:id="txt_addStudentFirstName" layoutX="100.0" layoutY="145.0" promptText="John" />
+                                    <TextField fx:id="txt_addStudentEmail" layoutX="100.0" layoutY="216.0" promptText="example@hotmail.com" />
+                                    <TextArea fx:id="txtArea_addStudent" layoutX="265.0" layoutY="107.0" prefHeight="200.0" prefWidth="200.0" />
+                                    <Label layoutX="31.0" layoutY="111.0" text="Student ID:" />
+                                    <Label layoutX="32.0" layoutY="149.0" text="First Name:" />
+                                    <Label layoutX="61.0" layoutY="220.0" text="Email:" />
+                                    <Label layoutX="14.0" layoutY="258.0" text="Phonenumber:" />
+                                    <TextField fx:id="txt_addStudentPhoneNumber" layoutX="100.0" layoutY="254.0" promptText="0703892392" />
+                                    <Label layoutX="191.0" layoutY="26.0" prefHeight="26.0" prefWidth="110.0" text="Add a student">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txt_addStudentLastName" layoutX="100.0" layoutY="182.0" promptText="Doe" />
+                                    <Label layoutX="33.0" layoutY="186.0" text="Last Name:" />
+                                    <Label layoutX="91.0" layoutY="111.0" prefHeight="17.0" prefWidth="12.0" text="*" textFill="RED" />
+                                    <Label layoutX="91.0" layoutY="149.0" prefHeight="17.0" prefWidth="9.0" text="*" textFill="RED" />
+                                    <Label layoutX="92.0" layoutY="186.0" prefHeight="17.0" prefWidth="8.0" text="*" textFill="RED" />
+                                    <Label layoutX="93.0" layoutY="220.0" text="*" textFill="RED" />
+                                    <Label layoutX="93.0" layoutY="258.0" text="*" textFill="RED" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Remove">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="191.0" layoutY="26.0" prefHeight="26.0" prefWidth="142.0" text="Remove a student">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="cbox_removeStudent_studentID" layoutX="88.0" layoutY="154.0" prefWidth="150.0" />
+                                    <Button layoutX="140.0" layoutY="207.0" mnemonicParsing="false" onAction="#btnRemoveStudent" text="Remove" />
+                                    <TextArea fx:id="txtArea_removeStudent" layoutX="249.0" layoutY="86.0" prefHeight="200.0" prefWidth="200.0" />
+                                    <Label layoutX="23.0" layoutY="158.0" text="Student ID:" />
+                                    <Label layoutX="82.0" layoutY="158.0" prefHeight="17.0" prefWidth="14.0" text="*" textFill="RED" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="123.0" style="-fx-background-color: #91B7C8;">
+         <children>
+            <Button layoutY="100.0" mnemonicParsing="false" onAction="#buttonStudent" prefHeight="48.0" prefWidth="123.0" style="-fx-background-color: #ffffff00;" text="Student">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutY="170.0" mnemonicParsing="false" onAction="#buttonCourse" prefHeight="48.0" prefWidth="123.0" style="-fx-background-color: #ffffff00;" text="Course">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutY="240.0" mnemonicParsing="false" onAction="#buttonResult" prefHeight="48.0" prefWidth="123.0" style="-fx-background-color: #ffffff00;" text="Result">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <effect>
+            <Glow level="0.23" />
+         </effect></AnchorPane>
+   </children>
+</AnchorPane>

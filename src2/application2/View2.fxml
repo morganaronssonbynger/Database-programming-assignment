@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="915.0" style="-fx-background-color: #9BDEFB;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application2.Controller2">
+   <children>
+      <AnchorPane prefHeight="604.0" prefWidth="915.0">
+         <children>
+            <Pane fx:id="pnl_Query" layoutX="162.0" prefHeight="604.0" prefWidth="754.0" style="-fx-background-color: #9BDEFB;">
+               <children>
+                  <TabPane prefHeight="604.0" prefWidth="754.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="All keys">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tableViewAllKeys" layoutX="158.0" layoutY="84.0" prefHeight="426.0" prefWidth="573.0">
+                                      <columns>
+                                        <TableColumn fx:id="colConstraintNameAllKeys" prefWidth="177.0" text="Constraint Name" />
+                                        <TableColumn fx:id="colTableNameAllKeys" prefWidth="198.0" text="Table Name" />
+                                          <TableColumn fx:id="colConstraintTypeAllKeys" prefWidth="196.0" text="Constraint Type" />
+                                      </columns>
+                                    </TableView>
+                                    <Button layoutX="33.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnAllKeys" prefHeight="47.0" prefWidth="102.0" text="Get data" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="All table constraints">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tableViewTableConstraints" layoutX="158.0" layoutY="84.0" prefHeight="426.0" prefWidth="573.0">
+                                      <columns>
+                                        <TableColumn fx:id="colConstraintName" prefWidth="168.0" text="Constraint Name" />
+                                        <TableColumn fx:id="colTableNameTableConstraints" prefWidth="236.0" text="Table Name" />
+                                          <TableColumn fx:id="colConstraintType" prefWidth="167.0" text="Constraint type" />
+                                      </columns>
+                                    </TableView>
+                                    <Button layoutX="33.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnTableConstraints" prefHeight="47.0" prefWidth="102.0" text="Get data" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="All tables">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button layoutX="33.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnAllTables" prefHeight="47.0" prefWidth="102.0" text="Get data" />
+                                    <TableView fx:id="tableViewAllTables" layoutX="158.0" layoutY="84.0" prefHeight="426.0" prefWidth="573.0">
+                                      <columns>
+                                        <TableColumn fx:id="colTableNameAllTables" prefWidth="572.0" text="Table Name" />
+                                      </columns>
+                                    </TableView>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="All coloumns">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button layoutX="33.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnAllColumns" prefHeight="47.0" prefWidth="102.0" text="Get data" />
+                                    <TableView fx:id="tableViewAllColumns" layoutX="158.0" layoutY="84.0" prefHeight="426.0" prefWidth="573.0">
+                                      <columns>
+                                        <TableColumn fx:id="colTableNameAllColumns" prefWidth="231.0" text="Table Name" />
+                                        <TableColumn fx:id="colColumnNameAllColumns" prefWidth="221.0" text="Column Name" />
+                                          <TableColumn fx:id="colDataType" prefWidth="120.0" text="Data Type" />
+                                      </columns>
+                                    </TableView>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Most rows">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button layoutX="33.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnTableWithHighestRowCount" prefHeight="47.0" prefWidth="102.0" text="Get data" />
+                                    <TableView fx:id="tableViewTableWithHighestRowCount" layoutX="158.0" layoutY="84.0" prefHeight="426.0" prefWidth="573.0">
+                                      <columns>
+                                        <TableColumn fx:id="colTableNameTableWithHighestRowCount" prefWidth="280.0" text="Table Name" />
+                                        <TableColumn fx:id="colRowCountTableWithHighestRowCount" prefWidth="292.0" text="Row Count" />
+                                      </columns>
+                                    </TableView>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_Employee" layoutX="161.0" prefHeight="604.0" prefWidth="754.0" style="-fx-background-color: #9BDEFB;">
+               <children>
+                  <TabPane prefHeight="604.0" prefWidth="754.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Employee">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tableViewEmp" layoutX="158.0" layoutY="84.0" prefHeight="426.0" prefWidth="573.0">
+                                      <columns>
+                                        <TableColumn fx:id="colNo" prefWidth="53.0" text="No_" />
+                                        <TableColumn fx:id="colFirstName" prefWidth="133.0" text="First Name" />
+                                          <TableColumn fx:id="colLastName" prefWidth="124.0" text="Last Name" />
+                                          <TableColumn fx:id="colJobTitle" prefWidth="127.0" text="Job TItle" />
+                                          <TableColumn fx:id="colPhoneNo" prefWidth="135.0" text="Phone No_" />
+                                      </columns>
+                                    </TableView>
+                                    <Button layoutX="33.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnEmployeeContent" prefHeight="47.0" prefWidth="102.0" text="Get data" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Absence">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tableViewEmpAbsence" layoutX="158.0" layoutY="84.0" prefHeight="426.0" prefWidth="573.0">
+                                      <columns>
+                                        <TableColumn fx:id="colEmployeeNo" prefWidth="86.0" text="Employee No_" />
+                                        <TableColumn fx:id="colFromDate" prefWidth="117.0" text="From Date" />
+                                          <TableColumn fx:id="colToDate" prefWidth="129.0" text="To Date" />
+                                          <TableColumn fx:id="colCauseOfAbsenceCode" prefWidth="135.0" text="Cause of absence code" />
+                                          <TableColumn fx:id="colDescription" prefWidth="105.0" text="Description" />
+                                      </columns>
+                                    </TableView>
+                                    <Button layoutX="33.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnEmployeeAbsence" prefHeight="47.0" prefWidth="102.0" text="Get data" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                       <Tab text="Qualification">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tableViewEmpQualification" layoutX="158.0" layoutY="84.0" prefHeight="426.0" prefWidth="573.0">
+                                      <columns>
+                                        <TableColumn fx:id="colEmpNoQualification" prefWidth="91.0" text="Employee No_" />
+                                          <TableColumn fx:id="colLineNo" prefWidth="75.0" text="Line No" />
+                                        <TableColumn fx:id="colQualificationCode" prefWidth="137.0" text="Qualification Code" />
+                                          <TableColumn fx:id="colDescriptionQualification" prefWidth="110.0" text="Description" />
+                                          <TableColumn fx:id="colInstitutionCompany" prefWidth="159.0" text="Institution_Company" />
+                                      </columns>
+                                    </TableView>
+                                    <Button layoutX="33.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnEmployeeQualification" prefHeight="47.0" prefWidth="102.0" text="Get data" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                       <Tab text="Relatives">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tableViewEmpRelative" layoutX="158.0" layoutY="84.0" prefHeight="426.0" prefWidth="573.0">
+                                      <columns>
+                                        <TableColumn fx:id="colEmpNoRelative" prefWidth="87.0" text="Employee No_" />
+                                        <TableColumn fx:id="colRelativeCode" prefWidth="100.0" text="Relative Code" />
+                                          <TableColumn fx:id="colFirstNameRelatives" prefWidth="111.0" text="First Name" />
+                                          <TableColumn fx:id="colLastNameRelatives" prefWidth="126.0" text="Last Name" />
+                                          <TableColumn fx:id="colBirthDate" prefWidth="148.0" text="Birth Date" />
+                                      </columns>
+                                    </TableView>
+                                    <Button layoutX="33.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnEmployeeRelative" prefHeight="47.0" prefWidth="102.0" text="Get data" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Employee Metadata">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button layoutX="33.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnEmployeeMetadata" prefHeight="47.0" prefWidth="102.0" text="Get data" />
+                                    <TableView fx:id="tableViewEmployeeMetadata" layoutX="158.0" layoutY="84.0" prefHeight="426.0" prefWidth="573.0">
+                                      <columns>
+                                        <TableColumn fx:id="colTableCatalogEmployeeMetadata" prefWidth="90.28570556640625" text="Table_Catalog" />
+                                        <TableColumn fx:id="colTableNameEmployeeMetadata" prefWidth="145.14285278320312" text="Table_Name" />
+                                          <TableColumn fx:id="colColumnNameEmployeeMetadata" prefWidth="135.42852783203125" text="Column_Name" />
+                                          <TableColumn fx:id="colOrdinalPositionEmployeeMetadata" prefWidth="98.85711669921875" text="Ordinal_Position" />
+                                          <TableColumn fx:id="colDataTypeEmployeeMetadata" prefWidth="100.0" text="Data_Type" />
+                                      </columns>
+                                    </TableView>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="604.0" prefWidth="163.0" style="-fx-background-color: #91B7C8;">
+         <children>
+            <Button layoutY="287.0" mnemonicParsing="false" onAction="#btnQuery" prefHeight="104.0" prefWidth="163.0" style="-fx-background-color: #ffffff00;" text="Query">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutY="162.0" mnemonicParsing="false" onAction="#btnEmployee" prefHeight="96.0" prefWidth="163.0" style="-fx-background-color: #ffffff00;" text="Employee">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
